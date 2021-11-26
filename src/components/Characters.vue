@@ -33,6 +33,10 @@ export default {
   margin: 10px 20px 40px 20px;
   padding: 10px 0;
   background-color: lighten($primary-color, 5%);
+  &:hover{
+    background-color: lighten($primary-color, 15%);
+    transition: all 0.3s;
+  }
   .container-img{
     // height: 100%;
     width: 100%;
