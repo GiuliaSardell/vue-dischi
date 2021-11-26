@@ -1,20 +1,25 @@
 <template>
   <div class="col-2">
     <div class="container-img">
-      <img src="https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg" alt="">
+      <img :src="character.poster" :alt="character.title">
     </div>
     
-    <h6>New Jersey</h6>
-    <span>Bon Jovi</span>
-    <span>anno</span>
+    <h6>{{character.title}}</h6>
+    <span>{{character.author}}</span>
+    <span>{{character.year}}</span>
   </div>
 </template>
 
 <script>
 
 export default {
-name: 'Characters'
-}
+  name: 'Characters',
+  props:{
+    character: Object
+  }
+  }
+  
+
 </script>
 
 <style lang="scss">
@@ -23,7 +28,11 @@ name: 'Characters'
 @import '../assets/style/vars.scss';
 
 .col-2{
+  width: 15% !important;
   cursor: pointer;
+  margin: 10px 20px 40px 20px;
+  padding: 10px 0;
+  background-color: lighten($primary-color, 5%);
   .container-img{
     // height: 100%;
     width: 100%;
@@ -36,6 +45,7 @@ name: 'Characters'
     // }
   }
   h6{
+    margin: 10px 0;
     text-transform: uppercase;
     color: white;
     font-weight: bold;

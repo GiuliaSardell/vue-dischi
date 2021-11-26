@@ -2,7 +2,7 @@
   <div class="main-wrapper">
     <Header />
     <div class="container">
-      <h1>ciao bootstrap</h1>
+
       <CharactersList />
     </div>
     

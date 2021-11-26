@@ -20,6 +20,7 @@ header{
   // height: 80px;
   background-color: lighten($primary-color, 10%);
   padding: 10px;
+  margin-bottom: 40px;
 
   .container-logo{
     width: 50px;

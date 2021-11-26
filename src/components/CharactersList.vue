@@ -1,10 +1,11 @@
 <template>
   <div class="row">
-    <Character />
-    <Character />
-    <Character />
-    <Character />
-    <Character />
+    <Character 
+      v-for="character in characters"
+      :key ="character.id"
+      :character="character"
+    />
+ 
 
     <!-- <div class="col-2">lista caratteri</div>
     <div class="col-2">lista caratteri</div>
@@ -26,7 +27,7 @@ export default {
   },
   data(){
     return{
-      character: []
+      characters: []
     }
   },
   methods:{
@@ -34,8 +35,9 @@ export default {
       axios.get('https://flynn.boolean.careers/exercises/api/array/music')
       .then( r => {
         // console.log('r',r);
-        this.character = r.data;
-        console.log('characters',this.character)
+        this.characters = r.data.response;
+        console.log('r',r)
+        console.log('characters',this.characters)
       })
       .catch( e => {
         console.log('e',e);
