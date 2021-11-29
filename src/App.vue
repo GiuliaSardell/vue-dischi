@@ -1,6 +1,8 @@
 <template>
   <div class="main-wrapper">
     <Header />
+    <!-- <Select @changeValue="getChangeValue()"
+    /> -->
     <div class="container">
 
       <CharactersList />
@@ -11,6 +13,7 @@
 
 <script>
 import Header from './components/Header.vue';
+// import Select from './components/Select.vue';
 import CharactersList from './components/CharactersList.vue';
 
 
@@ -18,9 +21,11 @@ export default {
   name: 'App',
   components: {
     Header,
-    CharactersList,
+    CharactersList
+  },
+  
     
-  }
+  
 }
 </script>
 

@@ -2,6 +2,7 @@
   <div class="col-2">
     <div class="container-img">
       <img :src="character.poster" :alt="character.title">
+      
     </div>
     
     <h6>{{character.title}}</h6>
@@ -38,15 +39,13 @@ export default {
     transition: all 0.3s;
   }
   .container-img{
-    // height: 100%;
+    height: 60%;
     width: 100%;
   }
   img{
     width: 100%;
-    height: 100%;
-    // &:hover{
-    //   filter: brightness(1);
-    // }
+    // height: 100%;
+ 
   }
   h6{
     margin: 10px 0;
